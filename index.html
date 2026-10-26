@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#130d24">
+  <title>ALLISON.EXE — A story waiting to begin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><div class="moon"></div><div id="stars"></div><div id="petals"></div></div>
+  <header class="topbar">
+    <div class="brand">✦ ALLISON<span>.EXE</span></div>
+    <div class="top-actions">
+      <button id="sound-toggle" class="icon-button" aria-label="Activar o desactivar sonido">♫ Sonido: apagado</button>
+      <button id="save-reset" class="icon-button" title="Reiniciar progreso">↺ Reiniciar</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="title-screen" class="screen title-screen active">
+      <div class="title-copy">
+        <p class="eyebrow">UN PEQUEÑO UNIVERSO HECHO PARA TI</p>
+        <h1>ALLISON<span>.EXE</span></h1>
+        <p class="subtitle">Una aventura que todavía no tiene final...</p>
+        <div class="title-rule"><span>✦</span></div>
+        <button id="start-button" class="primary-button">▶ Comenzar aventura</button>
+        <button id="continue-button" class="secondary-button hidden">Continuar aventura</button>
+        <p class="tiny-note">Recomendación: usa audífonos, pantalla completa y un poquito de curiosidad.</p>
+      </div>
+      <div class="title-characters" aria-hidden="true">
+        <div class="sprite xoferz"><span class="hair">〰</span><span class="glasses">▣ ▣</span><span class="face">ᴗ</span><span class="shirt">▤</span></div>
+        <div class="heart-orbit">♡</div>
+        <div class="sprite allison"><span>✿</span><small>ALLISON</small></div>
+      </div>
+      <div class="ground-flowers" aria-hidden="true">✿　❀　✿　❀　✿　❀　✿</div>
+    </section>
+
+    <section id="story-screen" class="screen game-screen">
+      <div class="scene-heading"><span id="chapter-label">CAPÍTULO 01</span><span id="scene-label">El comienzo</span></div>
+      <div id="scene-art" class="scene-art garden-art">
+        <div class="horizon"></div><div class="tree tree-one">✿</div><div class="tree tree-two">✿</div>
+        <div class="path"></div><div class="fireflies" aria-hidden="true">·　✦　·　✧　·　✦　·</div>
+        <div id="explore-world" class="explore-world hidden"></div>
+        <div id="scene-object-layer" class="scene-object-layer"></div>
+        <div id="scene-characters" class="scene-characters"><div class="mini-avatar xoferz-avatar">X</div><div class="mini-avatar allison-avatar">A</div></div>
+      </div>
+      <div class="status-row">
+        <div id="objective">OBJETIVO: descubre esta historia</div>
+        <div id="inventory-count">INVENTARIO · 0</div>
+      </div>
+      <div id="dialogue-box" class="dialogue-box">
+        <div class="portrait" id="portrait">✦</div>
+        <div class="dialogue-content"><div id="speaker" class="speaker">SISTEMA</div><p id="dialogue-text"></p><div class="dialogue-footer"><span id="dialogue-hint">Pulsa continuar para avanzar</span><button id="dialogue-next" class="small-button">Continuar ▸</button></div></div>
+      </div>
+      <div id="choice-panel" class="choice-panel hidden"></div>
+      <div id="explore-controls" class="explore-controls hidden">
+        <div class="dpad"><button data-move="up">▲</button><div><button data-move="left">◀</button><button data-move="down">▼</button><button data-move="right">▶</button></div></div>
+        <span>Muévete con WASD / flechas · Acércate a los objetos y pulsa E</span>
+        <button id="interact-button" class="small-button">Interactuar (E)</button>
+      </div>
+      <div class="progress-track"><div id="progress-fill"></div></div>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true"><div class="modal-card"><button id="modal-close" class="modal-close" aria-label="Cerrar">×</button><div id="modal-content"></div></div></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
